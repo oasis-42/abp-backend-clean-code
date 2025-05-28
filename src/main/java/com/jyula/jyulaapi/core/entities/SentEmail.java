@@ -2,6 +2,7 @@ package com.jyula.jyulaapi.core.entities;
 
 import com.jyula.jyulaapi.core.entities.security.User;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
@@ -10,8 +11,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Builder
-@AllArgsConstructor
+@SuperBuilder
 @Table(name = "sent_emails")
 public class SentEmail extends BaseEntity {
     @Column(name = "status")

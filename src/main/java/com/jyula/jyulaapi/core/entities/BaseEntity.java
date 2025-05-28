@@ -2,6 +2,7 @@ package com.jyula.jyulaapi.core.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.proxy.HibernateProxy;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @MappedSuperclass
 @Getter
 @Setter
+@SuperBuilder
 public class BaseEntity {
     @Id
     @Column(name = "id")

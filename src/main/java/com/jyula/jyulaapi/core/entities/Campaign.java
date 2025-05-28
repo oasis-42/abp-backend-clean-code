@@ -1,6 +1,7 @@
 package com.jyula.jyulaapi.core.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -10,8 +11,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Builder
-@AllArgsConstructor
+@SuperBuilder
 @Table(name = "campaigns")
 public class Campaign extends BaseEntity {
     @Column(name = "name")

@@ -1,6 +1,7 @@
 package com.jyula.jyulaapi.core.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,8 +13,7 @@ import javax.persistence.UniqueConstraint;
 @Setter
 @Getter
 @Entity
-@Builder
-@AllArgsConstructor
+@SuperBuilder
 @Table(name = "contacts", uniqueConstraints = {
     @UniqueConstraint(columnNames = "email")
 })
@@ -22,10 +22,4 @@ public class Contact extends BaseEntity {
     private String email;
     @Column(name = "name")
     private String name;
-
-    //    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(	name = "user_roles",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "role_id"))
-//    private Set<Role> roles = new HashSet<>();
 }

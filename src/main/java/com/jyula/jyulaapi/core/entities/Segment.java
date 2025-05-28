@@ -2,6 +2,7 @@ package com.jyula.jyulaapi.core.entities;
 
 import com.jyula.jyulaapi.core.entities.security.User;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,8 +13,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Builder
-@AllArgsConstructor
+@SuperBuilder
 @Table(name = "segments")
 public class Segment extends BaseEntity {
     @Column(name = "name")
